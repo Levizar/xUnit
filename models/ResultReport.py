@@ -21,7 +21,4 @@ class ResultReport:
         )
 
     def failure_details(self) -> str:
-        failure_details = ""
-        for test_name, error in self.failed_tests:
-            failure_details += f"{test_name} {format_error_string(error)}\n"
-        return failure_details
+        return "\n".join([f"{test_name} {format_error_string(error)}" for test_name, error in self.failed_tests])
