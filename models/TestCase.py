@@ -15,7 +15,7 @@ class TestCase:
         return False
 
     def __hash__(self):
-        return 0
+        return hash(self.name)
 
     def setup(self) -> None:
         pass
