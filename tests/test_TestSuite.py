@@ -40,11 +40,3 @@ class TestSuiteTest(TestCase):
             ]),
             "Test suite should contains test_method and failing_test_method from TestCaseTest "
         )
-
-
-if __name__ == '__main__':
-    ts_TestSuiteTest = TestSuiteTest().make_TestSuite()
-    res = ts_TestSuiteTest.run()
-    print(res.summary())
-    if res.failed_tests:
-        print(res.failure_details())
